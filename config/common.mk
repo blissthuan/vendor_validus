@@ -255,3 +255,5 @@ PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 -include vendor/cyngn/product.mk
 
 $(call inherit-product-if-exists, vendor/extra/product.mk)
+
+EXTENDED_POST_PROCESS_PROPS := vendor/validus/tools/slim_process_props.py
