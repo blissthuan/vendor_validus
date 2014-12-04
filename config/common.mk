@@ -135,6 +135,10 @@ PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
     libemoji
+	
+# Proprietary latinime lib needed for Keyboard swyping
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
 
 # Custom validus packages
 PRODUCT_PACKAGES += \
