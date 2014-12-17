@@ -321,6 +321,11 @@ ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
 endif
 endif
 
+# Chromium Prebuilt
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+-include prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk
+endif
+
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
 
