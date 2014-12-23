@@ -208,6 +208,11 @@ endif
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/validus/overlay/common
 
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/validus/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+
 # Version
 RELEASE = false
 VALIDUS_VERSION_MAJOR = 4
