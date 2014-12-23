@@ -36,14 +36,6 @@ PRODUCT_BOOTANIMATION := vendor/validus/prebuilt/common/bootanimation/$(TARGET_B
 endif
 endif
 
-ifdef VALIDUS_NIGHTLY
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmodnightly
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=cyanogenmod
-endif
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -74,18 +66,12 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
 ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
-# Copy over the changelog to the device
-PRODUCT_COPY_FILES += \
-    vendor/validus/CHANGELOG.mkdn:system/etc/CHANGELOG-VALIDUS.txt
-
 # Backup Tool
-ifneq ($(WITH_GMS),true)
 PRODUCT_COPY_FILES += \
     vendor/validus/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/validus/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/validus/prebuilt/common/bin/50-cm.sh:system/addon.d/50-cm.sh \
     vendor/validus/prebuilt/common/bin/blacklist:system/addon.d/blacklist
-endif
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
@@ -222,104 +208,30 @@ endif
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/validus/overlay/common
 
-PRODUCT_VERSION_MAJOR = 12
-PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = 0-RC0
+# Version
+RELEASE = false
+VALIDUS_VERSION_MAJOR = 4
+VALIDUS_VERSION_MINOR = 0
 
-# Set VALIDUS_BUILDTYPE from the env RELEASE_TYPE, for jenkins compat
-
-ifndef VALIDUS_BUILDTYPE
-    ifdef RELEASE_TYPE
-        # Starting with "VALIDUS_" is optional
-        RELEASE_TYPE := $(shell echo $(RELEASE_TYPE) | sed -e 's|^VALIDUS_||g')
-        VALIDUS_BUILDTYPE := $(RELEASE_TYPE)
-    endif
-endif
-
-# Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(VALIDUS_BUILDTYPE)),)
-    VALIDUS_BUILDTYPE :=
-endif
-
-ifdef VALIDUS_BUILDTYPE
-    ifneq ($(VALIDUS_BUILDTYPE), SNAPSHOT)
-        ifdef VALIDUS_EXTRAVERSION
-            # Force build type to EXPERIMENTAL
-            VALIDUS_BUILDTYPE := EXPERIMENTAL
-            # Remove leading dash from VALIDUS_EXTRAVERSION
-            VALIDUS_EXTRAVERSION := $(shell echo $(VALIDUS_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to VALIDUS_EXTRAVERSION
-            VALIDUS_EXTRAVERSION := -$(VALIDUS_EXTRAVERSION)
-        endif
-    else
-        ifndef VALIDUS_EXTRAVERSION
-            # Force build type to EXPERIMENTAL, SNAPSHOT mandates a tag
-            VALIDUS_BUILDTYPE := EXPERIMENTAL
-        else
-            # Remove leading dash from VALIDUS_EXTRAVERSION
-            VALIDUS_EXTRAVERSION := $(shell echo $(VALIDUS_EXTRAVERSION) | sed 's/-//')
-            # Add leading dash to VALIDUS_EXTRAVERSION
-            VALIDUS_EXTRAVERSION := -$(VALIDUS_EXTRAVERSION)
-        endif
-    endif
+# release
+ifeq ($(RELEASE),true)
+    VALIDUS_VERSION := LS-LP-MileStone-$(VALIDUS_VERSION_MAJOR).$(VALIDUS_VERSION_MINOR)
 else
-    # If VALIDUS_BUILDTYPE is not defined, set to UNOFFICIAL
-    VALIDUS_BUILDTYPE := UNOFFICIAL
-    VALIDUS_EXTRAVERSION :=
-endif
-
-ifeq ($(VALIDUS_BUILDTYPE), UNOFFICIAL)
-    ifneq ($(TARGET_UNOFFICIAL_BUILD_ID),)
-        VALIDUS_EXTRAVERSION := -$(TARGET_UNOFFICIAL_BUILD_ID)
-    endif
-endif
-
-ifeq ($(VALIDUS_BUILDTYPE), RELEASE)
-    ifndef TARGET_VENDOR_RELEASE_BUILD_ID
-        VALIDUS_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(VALIDUS_BUILD)
-    else
-        ifeq ($(TARGET_BUILD_VARIANT),user)
-            VALIDUS_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)-$(VALIDUS_BUILD)
-        else
-            VALIDUS_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(VALIDUS_BUILD)
-        endif
-    endif
-else
-    ifeq ($(PRODUCT_VERSION_MINOR),0)
-        VALIDUS_VERSION := $(PRODUCT_VERSION_MAJOR)-$(shell date -u +%Y%m%d)-$(VALIDUS_BUILDTYPE)$(VALIDUS_EXTRAVERSION)-$(VALIDUS_BUILD)
-    else
-        VALIDUS_VERSION := $(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(shell date -u +%Y%m%d)-$(VALIDUS_BUILDTYPE)$(VALIDUS_EXTRAVERSION)-$(VALIDUS_BUILD)
-    endif
+    VALIDUS_VERSION_STATE := $(shell date +%Y-%m-%d)
+    VALIDUS_VERSION := LP-v$(VALIDUS_VERSION_MAJOR).$(VALIDUS_VERSION_MINOR)-$(VALIDUS_VERSION_STATE)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-  ro.validus.version=$(VALIDUS_VERSION) \
-  ro.validus.releasetype=$(VALIDUS_BUILDTYPE) \
-  ro.modversion=$(VALIDUS_VERSION) \
-  ro.cmlegal.url=http://www.cyanogenmod.org/docs/privacy
+    ro.validus.version=$(VALIDUS_VERSION)
 
--include vendor/validus-priv/keys/keys.mk
+ifeq ($(RELEASE),true)
+# Disable multithreaded dexopt by default
 
-VALIDUS_DISPLAY_VERSION := $(VALIDUS_VERSION)
-
-ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),)
-ifneq ($(PRODUCT_DEFAULT_DEV_CERTIFICATE),build/target/product/security/testkey)
-  ifneq ($(VALIDUS_BUILDTYPE), UNOFFICIAL)
-    ifndef TARGET_VENDOR_RELEASE_BUILD_ID
-      ifneq ($(VALIDUS_EXTRAVERSION),)
-        # Remove leading dash from VALIDUS_EXTRAVERSION
-        VALIDUS_EXTRAVERSION := $(shell echo $(VALIDUS_EXTRAVERSION) | sed 's/-//')
-        TARGET_VENDOR_RELEASE_BUILD_ID := $(VALIDUS_EXTRAVERSION)
-      else
-        TARGET_VENDOR_RELEASE_BUILD_ID := $(shell date -u +%Y%m%d)
-      endif
-    else
-      TARGET_VENDOR_RELEASE_BUILD_ID := $(TARGET_VENDOR_RELEASE_BUILD_ID)
-    endif
-    VALIDUS_DISPLAY_VERSION=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)-$(TARGET_VENDOR_RELEASE_BUILD_ID)
-  endif
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dalvik.multithread=false
 endif
-endif
+
+-include vendor/cm-priv/keys/keys.mk
 
 # Chromium Prebuilt
 ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
@@ -328,9 +240,6 @@ endif
 
 # by default, do not update the recovery with system updates
 PRODUCT_PROPERTY_OVERRIDES += persist.sys.recovery_update=false
-
-PRODUCT_PROPERTY_OVERRIDES += \
-  ro.validus.display.version=$(VALIDUS_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
