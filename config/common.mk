@@ -213,6 +213,10 @@ PRODUCT_COPY_FILES += \
     vendor/validus/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/validus/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
+#NovaLauncher
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/common/app/Nova33.apk:system/app/Nova33.apk
+		
 # Version
 RELEASE = false
 VALIDUS_VERSION_MAJOR = 4
@@ -220,7 +224,7 @@ VALIDUS_VERSION_MINOR = 0
 
 # release
 ifeq ($(RELEASE),true)
-    VALIDUS_VERSION := LS-LP-MileStone-$(VALIDUS_VERSION_MAJOR).$(VALIDUS_VERSION_MINOR)
+    VALIDUS_VERSION := LP-MileStone-$(VALIDUS_VERSION_MAJOR).$(VALIDUS_VERSION_MINOR)
 else
     VALIDUS_VERSION_STATE := $(shell date +%Y-%m-%d)
     VALIDUS_VERSION := LP-v$(VALIDUS_VERSION_MAJOR).$(VALIDUS_VERSION_MINOR)-$(VALIDUS_VERSION_STATE)
