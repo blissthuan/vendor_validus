@@ -216,6 +216,10 @@ PRODUCT_COPY_FILES += \
 #NovaLauncher
 PRODUCT_COPY_FILES += \
     vendor/validus/prebuilt/common/app/Nova33.apk:system/app/Nova33.apk
+	
+# AdAway
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/common/app/Adaway/org.adaway.apk:system/app/Adaway/org.adaway.apk	
 		
 # Version
 RELEASE = false
