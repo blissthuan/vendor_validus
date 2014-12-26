@@ -1,5 +1,6 @@
 add_lunch_combo validus_bacon-userdebug
 add_lunch_combo validus_d2att-userdebug
+add_lunch_combo validus_d2bst-userdebug
 add_lunch_combo validus_d2tmo-userdebug
 add_lunch_combo validus_d2vzw-userdebug
 add_lunch_combo validus_d850-userdebug
