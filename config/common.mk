@@ -132,7 +132,6 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     AudioFX \
     CMFileManager \
-	PerformanceControl \
     Eleven \
     LockClock \
     OmniSwitch \
