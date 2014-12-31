@@ -214,6 +214,10 @@ PRODUCT_COPY_FILES += \
     vendor/validus/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
     vendor/validus/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
+#Camera
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/common/app/Camera.apk:system/app/Camera.apk
+		
 #NovaLauncher
 PRODUCT_COPY_FILES += \
     vendor/validus/prebuilt/common/app/Nova33.apk:system/app/Nova33.apk
