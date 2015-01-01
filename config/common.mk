@@ -191,7 +191,6 @@ PRODUCT_PACKAGES += \
 
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
-
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
