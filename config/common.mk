@@ -124,7 +124,7 @@ PRODUCT_PACKAGES += \
 	
 # Proprietary latinime lib needed for Keyboard swyping
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/lib/libjni_latinime.so:system/lib/libjni_latinime.so
+    vendor/validus/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # Custom validus packages
 PRODUCT_PACKAGES += \
