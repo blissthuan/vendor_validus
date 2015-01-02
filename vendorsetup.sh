@@ -23,6 +23,7 @@ add_lunch_combo validus_ls990-userdebug
 add_lunch_combo validus_m8-userdebug
 add_lunch_combo validus_mako-userdebug
 add_lunch_combo validus_moto_msm8960-userdebug
+add_lunch_combo validus_moto_msm8960-userdebug_jbbl
 add_lunch_combo validus_quincyatt-userdebug
 add_lunch_combo validus_shamu-userdebug
 add_lunch_combo validus_vs980-userdebug
