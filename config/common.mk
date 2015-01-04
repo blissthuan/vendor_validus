@@ -194,7 +194,6 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank \
-    Superuser \
     su
 
 # Screen recorder
