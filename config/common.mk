@@ -135,8 +135,7 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     OmniSwitch \
-    CMHome \
-	Terminal
+    CMHome
 
 # validus Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
