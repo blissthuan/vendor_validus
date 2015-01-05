@@ -121,7 +121,7 @@ PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
     libemoji \
-	Terminal
+    Terminal
 	
 # Proprietary latinime lib needed for Keyboard swyping
 PRODUCT_COPY_FILES += \
