@@ -29,3 +29,4 @@ add_lunch_combo validus_quincyatt-userdebug
 add_lunch_combo validus_shamu-userdebug
 add_lunch_combo validus_vs980-userdebug
 add_lunch_combo validus_vs985-userdebug
+add_lunch_combo validus_yuga-userdebug
