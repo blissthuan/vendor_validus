@@ -128,7 +128,7 @@ PRODUCT_COPY_FILES += \
 
 # Viper4Android
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/etc/viper4Android/viper4android.apk:system/app/Viper4Android/viper4android.apk
+    vendor/validus/prebuilt/common/etc/viper4android/viper4android.apk:system/app/Viper4Android/viper4android.apk
 
 # Custom validus packages
 PRODUCT_PACKAGES += \
