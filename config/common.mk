@@ -134,13 +134,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
+	Terminal \
     AudioFX \
     CMFileManager \
     Eleven \
     LockClock \
     OmniSwitch \
-    CMHome \
-    Terminal	    
+    CMHome 	    
 
 # validus Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
