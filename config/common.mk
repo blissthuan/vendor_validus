@@ -120,12 +120,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
-    libemoji \
-    Terminal
+    libemoji 
 	
 # Proprietary latinime lib needed for Keyboard swyping
 PRODUCT_COPY_FILES += \
     vendor/validus/prebuilt/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
+
+# Viper4Android
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/common/etc/viper4Android/viper4android.apk:system/app/Viper4Android/viper4android.apk
 
 # Custom validus packages
 PRODUCT_PACKAGES += \
@@ -136,7 +139,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     OmniSwitch \
-    CMHome
+    CMHome \
+    Terminal	    
 
 # validus Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
