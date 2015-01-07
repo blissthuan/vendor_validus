@@ -31,3 +31,4 @@ add_lunch_combo validus_vs980-userdebug
 add_lunch_combo validus_vs985-userdebug
 add_lunch_combo validus_yuga-userdebug
 add_lunch_combo validus_odin-userdebug
+add_lunch_combo validus_honami-userdebug
