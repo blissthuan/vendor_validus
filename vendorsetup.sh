@@ -18,8 +18,8 @@ add_lunch_combo validus_ghost-userdebug
 add_lunch_combo validus_grouper-userdebug
 add_lunch_combo validus_hammerhead-userdebug
 add_lunch_combo validus_hercules-userdebug
-add_lunch_combo validus_i9300-userdebug
 add_lunch_combo validus_honami-userdebug
+add_lunch_combo validus_i9300-userdebug
 add_lunch_combo validus_ls980-userdebug
 add_lunch_combo validus_ls990-userdebug
 add_lunch_combo validus_m8-userdebug
@@ -31,6 +31,7 @@ add_lunch_combo validus_odin-userdebug
 add_lunch_combo validus_p3110-userdebug
 add_lunch_combo validus_quincyatt-userdebug
 add_lunch_combo validus_shamu-userdebug
+add_lunch_combo validus_togari-userdebug
 add_lunch_combo validus_vs980-userdebug
 add_lunch_combo validus_vs985-userdebug
 add_lunch_combo validus_yuga-userdebug
