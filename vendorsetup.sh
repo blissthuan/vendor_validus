@@ -22,6 +22,7 @@ add_lunch_combo validus_honami-userdebug
 add_lunch_combo validus_i9300-userdebug
 add_lunch_combo validus_ls980-userdebug
 add_lunch_combo validus_ls990-userdebug
+add_lunch_combo validus_lt01wifi-userdebug
 add_lunch_combo validus_m8-userdebug
 add_lunch_combo validus_mako-userdebug
 add_lunch_combo validus_moto_msm8960-userdebug
