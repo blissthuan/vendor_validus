@@ -1,5 +1,6 @@
 add_lunch_combo validus_amami-userdebug
 add_lunch_combo validus_bacon-userdebug
+add_lunch_combo validus_chagallwifi-userdebug
 add_lunch_combo validus_deb-userdebug
 add_lunch_combo validus_d2att-userdebug
 add_lunch_combo validus_d2bst-userdebug
