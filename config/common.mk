@@ -136,7 +136,6 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     OmniSwitch \
-	DeviceControl \
     CMHome 	    
 
 # validus Hardware Abstraction Framework
