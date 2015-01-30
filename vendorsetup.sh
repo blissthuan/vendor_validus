@@ -21,6 +21,7 @@ add_lunch_combo validus_grouper-userdebug
 add_lunch_combo validus_hammerhead-userdebug
 add_lunch_combo validus_hercules-userdebug
 add_lunch_combo validus_hltespr-userdebug
+add_lunch_combo validus_hltetmo-userdebug
 add_lunch_combo validus_honami-userdebug
 add_lunch_combo validus_i9100-userdebug
 add_lunch_combo validus_i9300-userdebug
