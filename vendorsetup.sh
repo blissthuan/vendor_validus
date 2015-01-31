@@ -20,6 +20,7 @@ add_lunch_combo validus_ghost-userdebug
 add_lunch_combo validus_grouper-userdebug
 add_lunch_combo validus_hammerhead-userdebug
 add_lunch_combo validus_hercules-userdebug
+add_lunch_combo validus_hlte-userdebug
 add_lunch_combo validus_hltespr-userdebug
 add_lunch_combo validus_hltetmo-userdebug
 add_lunch_combo validus_honami-userdebug
