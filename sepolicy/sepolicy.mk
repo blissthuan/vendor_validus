@@ -30,6 +30,7 @@ BOARD_SEPOLICY_UNION += \
     sysinit.te \
     system.te \
     system_app.te \
+	system_server.te \
     ueventd.te \
     vold.te \
     zygote.te \
