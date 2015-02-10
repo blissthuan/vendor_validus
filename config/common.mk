@@ -127,9 +127,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
-	Terminal \
+    Terminal \
     AudioFX \
     CMFileManager \
+    PerformanceControl \
     Eleven \
     LockClock \
     OmniSwitch \
