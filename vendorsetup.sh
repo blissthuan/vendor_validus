@@ -40,9 +40,11 @@ add_lunch_combo validus_p3110-userdebug
 add_lunch_combo validus_pollux_windy-userdebug
 add_lunch_combo validus_quincyatt-userdebug
 add_lunch_combo validus_shamu-userdebug
+add_lunch_combo validus_serrano3gxx-userdebug
 add_lunch_combo validus_serranoltexx-userdebug
 add_lunch_combo validus_sirius-userdebug
 add_lunch_combo validus_togari-userdebug
 add_lunch_combo validus_vs980-userdebug
 add_lunch_combo validus_vs985-userdebug
 add_lunch_combo validus_yuga-userdebug
+add_lunch_combo validus_z3-userdebug
