@@ -9,17 +9,9 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/validus/overlay/dictionaries
 
 # Optional validus packages
 PRODUCT_PACKAGES += \
-    Galaxy4 \
-    HoloSpiralWallpaper \
     LiveWallpapers \
     LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    NoiseField \
-    PhaseBeam \
-    VisualizationWallpapers \
-    PhotoTable \
     SoundRecorder \
-    PhotoPhase
 
 PRODUCT_PACKAGES += \
     VideoEditor \
