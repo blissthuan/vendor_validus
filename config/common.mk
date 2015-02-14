@@ -125,16 +125,12 @@ PRODUCT_COPY_FILES += \
 
 # Custom validus packages
 PRODUCT_PACKAGES += \
-    Launcher3 \
-    Trebuchet \
     Terminal \
     AudioFX \
-    CMFileManager \
     PerformanceControl \
     Eleven \
     LockClock \
-    OmniSwitch \
-    CMHome 	    
+    OmniSwitch
 
 # validus Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
