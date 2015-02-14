@@ -1,9 +1,6 @@
 # Inherit common validus stuff
 $(call inherit-product, vendor/validus/config/common.mk)
 
-# Bring in all video files
-$(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
-
 # Include validus audio files
 include vendor/validus/config/cm_audio.mk
 
