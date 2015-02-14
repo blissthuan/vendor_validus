@@ -13,14 +13,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     SoundRecorder \
 
-PRODUCT_PACKAGES += \
-    VideoEditor \
-    libvideoeditor_jni \
-    libvideoeditor_core \
-    libvideoeditor_osal \
-    libvideoeditor_videofilters \
-    libvideoeditorplayer
-
 # Extra tools in validus
 PRODUCT_PACKAGES += \
     vim \
