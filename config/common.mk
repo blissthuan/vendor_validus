@@ -125,6 +125,7 @@ PRODUCT_COPY_FILES += \
 
 # Custom validus packages
 PRODUCT_PACKAGES += \
+    Trebuchet \
     CMFileManager \
     Terminal \
     AudioFX \
