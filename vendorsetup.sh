@@ -17,6 +17,7 @@ add_lunch_combo validus_d855-userdebug
 add_lunch_combo validus_falcon-userdebug
 add_lunch_combo validus_flo-userdebug
 add_lunch_combo validus_f320-userdebug
+add_lunch_combo validus_geehrc-userdebug
 add_lunch_combo validus_ghost-userdebug
 add_lunch_combo validus_grouper-userdebug
 add_lunch_combo validus_hammerhead-userdebug
