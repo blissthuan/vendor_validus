@@ -36,8 +36,7 @@ add_lunch_combo validus_lt01wifi-userdebug
 add_lunch_combo validus_m8-userdebug
 add_lunch_combo validus_mako-userdebug
 add_lunch_combo validus_matissewifi-userdebug
-add_lunch_combo validus_moto_msm8960-userdebug
-add_lunch_combo validus_moto_msm8960_jbbl-userdebug
+add_lunch_combo validus_mb886-userdebug
 add_lunch_combo validus_n7100-userdebug
 add_lunch_combo validus_odin-userdebug
 add_lunch_combo validus_p3110-userdebug
