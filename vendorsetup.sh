@@ -24,8 +24,9 @@ add_lunch_combo validus_ls990-userdebug
 add_lunch_combo validus_vs980-userdebug
 add_lunch_combo validus_vs985-userdebug
 
-add_lunch_combo MOTOROLA
+add_lunch_combo *_MOTOROLA
 ###############
+add_lunch_combo validus_condor-userdebug
 add_lunch_combo validus_falcon-userdebug
 add_lunch_combo validus_ghost-userdebug
 add_lunch_combo validus_mb886-userdebUG
