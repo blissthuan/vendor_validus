@@ -1,10 +1,10 @@
 #!/bin/sh
 
-add_lunch_combo HTC
+add_lunch_combo *_HTC
 ###############
 add_lunch_combo validus_m8-userdebug
 
-add_lunch_combo LG
+add_lunch_combo *_LG
 ###############
 add_lunch_combo validus_d800-userdebug
 add_lunch_combo validus_d801-userdebug
@@ -29,9 +29,10 @@ add_lunch_combo *_MOTOROLA
 add_lunch_combo validus_condor-userdebug
 add_lunch_combo validus_falcon-userdebug
 add_lunch_combo validus_ghost-userdebug
-add_lunch_combo validus_mb886-userdebUG
+add_lunch_combo validus_mb886-userdebug
+add_lunch_combo validus_titan-userdebug
 
-add_lunch_combo NEXUS
+add_lunch_combo *_NEXUS
 ###############
 add_lunch_combo validus_deb-userdebug
 add_lunch_combo validus_flo-userdebug
@@ -40,11 +41,11 @@ add_lunch_combo validus_hammerhead-userdebug
 add_lunch_combo validus_mako-userdebug
 add_lunch_combo validus_shamu-userdebug
 
-add_lunch_combo ONEPLUS
+add_lunch_combo *_ONEPLUS
 ###############
 add_lunch_combo validus_bacon-userdebug
 
-add_lunch_combo SAMSUNG
+add_lunch_combo *_SAMSUNG
 ###############
 add_lunch_combo validus_chagallwifi-userdebug
 add_lunch_combo validus_d2att-userdebug
@@ -66,7 +67,7 @@ add_lunch_combo validus_quincyatt-userdebug
 add_lunch_combo validus_serrano3gxx-userdebug
 add_lunch_combo validus_serranoltexx-userdebug
 
-add_lunch_combo SONY
+add_lunch_combo *_SONY
 ###############
 add_lunch_combo validus_amami-userdebug
 add_lunch_combo validus_honami-userdebug
