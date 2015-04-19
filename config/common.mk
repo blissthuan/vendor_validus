@@ -135,7 +135,8 @@ PRODUCT_PACKAGES += \
     PerformanceControl \
     Eleven \
     LockClock \
-    OmniSwitch
+    OmniSwitch \
+    DeviceControl
 
 # validus Hardware Abstraction Framework
 PRODUCT_PACKAGES += \
