@@ -66,6 +66,7 @@ add_lunch_combo validus_p3110-userdebug
 add_lunch_combo validus_quincyatt-userdebug
 add_lunch_combo validus_serrano3gxx-userdebug
 add_lunch_combo validus_serranoltexx-userdebug
+add_lunch_combo validus_trltetmo-userdebug
 
 add_lunch_combo *_SONY
 ###############
