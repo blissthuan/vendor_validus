@@ -73,6 +73,7 @@ add_lunch_combo *_SONY
 add_lunch_combo validus_amami-userdebug
 add_lunch_combo validus_honami-userdebug
 add_lunch_combo validus_odin-userdebug
+add_lunch_combo validus_pollux-userdebug
 add_lunch_combo validus_pollux_windy-userdebug
 add_lunch_combo validus_sirius-userdebug
 add_lunch_combo validus_togari-userdebug
