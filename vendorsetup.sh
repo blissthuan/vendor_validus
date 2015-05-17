@@ -85,3 +85,4 @@ add_lunch_combo validus_z3-userdebug
 add_lunch_combo *_XIAOMI
 ###############
 add_lunch_combo validus_armani-userdebug
+add_lunch_combo validus_cancro-userdebug
