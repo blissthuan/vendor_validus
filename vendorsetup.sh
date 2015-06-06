@@ -48,6 +48,7 @@ add_lunch_combo validus_bacon-userdebug
 add_lunch_combo *_SAMSUNG
 ###############
 add_lunch_combo validus_chagallwifi-userdebug
+add_lunch_combo validus_d2att-userdebug
 add_lunch_combo validus_hercules-userdebug
 add_lunch_combo validus_hlte-userdebug
 add_lunch_combo validus_hltespr-userdebug
