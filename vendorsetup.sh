@@ -63,6 +63,7 @@ add_lunch_combo validus_jfltetmo-userdebug
 add_lunch_combo validus_matissewifi-userdebug
 add_lunch_combo validus_n7100-userdebug
 add_lunch_combo validus_n8013-userdebug
+add_lunch_combo validus_p3110-userdebug
 add_lunch_combo validus_quincyatt-userdebug
 add_lunch_combo validus_serrano3gxx-userdebug
 add_lunch_combo validus_serranoltexx-userdebug
