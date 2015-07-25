@@ -32,16 +32,23 @@ artifact_filename := $(LOCAL_MAVEN_GROUP).$(LOCAL_MAVEN_ARTIFACT)-$(LOCAL_MAVEN_
 
 LOCAL_PREBUILT_MODULE_FILE := $(call intermediates-dir-for,$(LOCAL_MODULE_CLASS),$(LOCAL_MODULE),,COMMON)/$(artifact_filename)
 
-$(LOCAL_PREBUILT_MODULE_FILE): specifier := $(LOCAL_MAVEN_GROUP):$(LOCAL_MAVEN_ARTIFACT):$(LOCAL_MAVEN_VERSION):$(LOCAL_MAVEN_PACKAGING)$(if $(LOCAL_MAVEN_CLASSIFIER),:$(LOCAL_MAVEN_CLASSIFIER))
 $(LOCAL_PREBUILT_MODULE_FILE): repo := $(LOCAL_MAVEN_REPO)
+$(LOCAL_PREBUILT_MODULE_FILE): group := $(LOCAL_MAVEN_GROUP)
+$(LOCAL_PREBUILT_MODULE_FILE): artifact := $(LOCAL_MAVEN_ARTIFACT)
+$(LOCAL_PREBUILT_MODULE_FILE): version := $(LOCAL_MAVEN_VERSION)
+$(LOCAL_PREBUILT_MODULE_FILE): packaging := $(LOCAL_MAVEN_PACKAGING)
+$(LOCAL_PREBUILT_MODULE_FILE): classifier := $(LOCAL_MAVEN_CLASSIFIER)
 $(LOCAL_PREBUILT_MODULE_FILE):
-	@mvn -q dependency:get dependency:copy \
+	$(hide) mvn -q org.apache.maven.plugins:maven-dependency-plugin:2.10:get \
+				   org.apache.maven.plugins:maven-dependency-plugin:2.10:copy \
 		-DremoteRepositories=central::::$(repo) \
-		-Dartifact=$(specifier) \
+		-Dartifact=$(group):$(artifact):$(version):$(packaging)$(if $(classifier),:$(classifier)) \
 		-DoutputDirectory=$(dir $@) \
 		-Dmdep.prependGroupId=true \
 		-Dmdep.overWriteSnapshots=true \
 		-Dmdep.overWriteReleases=true
+		-Dtransitive=false \
+		-DoutputDirectory=$(dir $@)
 	@echo -e ${CL_GRN}"Download:"${CL_RST}" $@"
 
 include $(BUILD_PREBUILT)
