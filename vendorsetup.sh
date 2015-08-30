@@ -2,6 +2,7 @@
 
 add_lunch_combo *_HTC
 ###############
+add_lunch_combo validus_endeavoru-userdebug
 add_lunch_combo validus_m8-userdebug
 
 add_lunch_combo *_LG
