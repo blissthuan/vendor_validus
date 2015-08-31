@@ -47,6 +47,7 @@ add_lunch_combo validus_shamu-userdebug
 add_lunch_combo *_ONEPLUS
 ###############
 add_lunch_combo validus_bacon-userdebug
+add_lunch_combo validus_oneplus2-userdebug
 
 add_lunch_combo *_SAMSUNG
 ###############
