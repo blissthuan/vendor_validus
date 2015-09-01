@@ -9,6 +9,7 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     SoundRecorder \
+    CMSettingsProvider
 
 # Extra tools in validus
 PRODUCT_PACKAGES += \
