@@ -139,7 +139,6 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     OmniSwitch \
-    OpenDelta \
     KernelAdiutor    
 
 # CM Platform Library
