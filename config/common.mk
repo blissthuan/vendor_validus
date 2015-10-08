@@ -138,7 +138,6 @@ PRODUCT_PACKAGES += \
     Trebuchet \
     CMFileManager \
     Terminal \
-    AudioFX \
     PerformanceControl \
     Eleven \
     LockClock \
@@ -173,8 +172,6 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
-    ntfsfix \
-    ntfs-3g \
     gdbserver \
     micro_bench \
     oprofiled \
