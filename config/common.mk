@@ -198,6 +198,13 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     media_codecs_ffmpeg.xml
 
+# TCM (TCP Connection Management)
+PRODUCT_PACKAGES += \
+    tcmiface
+
+PRODUCT_BOOT_JARS += \
+    tcmiface
+
 # These packages are excluded from user builds
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
