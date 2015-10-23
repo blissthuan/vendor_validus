@@ -209,8 +209,7 @@ PRODUCT_BOOT_JARS += \
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
-    procrank \
-    su
+    procrank
 
 # Screen recorder
 PRODUCT_PACKAGES += \
