@@ -209,7 +209,8 @@ PRODUCT_BOOT_JARS += \
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
-    procrank
+    procrank \
+    su
 
 # Screen recorder
 PRODUCT_PACKAGES += \
@@ -228,9 +229,9 @@ endif
 PRODUCT_PACKAGE_OVERLAYS += vendor/validus/overlay/common
 
 # SuperSU
-#PRODUCT_COPY_FILES += \
-#    vendor/validus/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-#    vendor/validus/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/common/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
+    vendor/validus/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 #NovaLauncher
 #PRODUCT_COPY_FILES += \
