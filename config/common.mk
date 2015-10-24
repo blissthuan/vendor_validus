@@ -234,7 +234,7 @@ PRODUCT_COPY_FILES += \
 
 #NovaLauncher
 PRODUCT_COPY_FILES += \
-    vendor/validus/prebuilt/common/app/Nova33.apk:system/app/Nova33.apk
+    vendor/validus/prebuilt/common/app/Nova41.apk:system/app/Nova41.apk
 	
 # AdAway
 PRODUCT_COPY_FILES += \
