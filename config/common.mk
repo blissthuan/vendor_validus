@@ -233,8 +233,8 @@ PRODUCT_COPY_FILES += \
     vendor/validus/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 #NovaLauncher
-#PRODUCT_COPY_FILES += \
-#    vendor/validus/prebuilt/common/app/Nova33.apk:system/app/Nova33.apk
+PRODUCT_COPY_FILES += \
+    vendor/validus/prebuilt/common/app/Nova33.apk:system/app/Nova33.apk
 	
 # AdAway
 PRODUCT_COPY_FILES += \
