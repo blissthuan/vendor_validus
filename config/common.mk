@@ -142,7 +142,8 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     OmniSwitch \
-    KernelAdiutor    
+    KernelAdiutor \  
+    ExactCalculator
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
