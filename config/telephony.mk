@@ -12,7 +12,7 @@ PRODUCT_COPY_FILES += \
 
 # Telephony packages
 PRODUCT_PACKAGES += \
-    Mms \
+    messaging \
     Stk \
     CellBroadcastReceiver \
     VoiceDialer \
