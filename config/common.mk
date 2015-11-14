@@ -155,10 +155,8 @@ PRODUCT_PACKAGES += \
     e2fsck \
     mke2fs \
     tune2fs \
-    bash \
     nano \
     htop \
-    powertop \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \

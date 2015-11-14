@@ -15,8 +15,10 @@ PRODUCT_PACKAGES += \
 # Extra tools in validus
 PRODUCT_PACKAGES += \
     7z \
+    bash \
     bzip2 \
     curl \
+    powertop \
     unrar \
     unzip \
     vim \
