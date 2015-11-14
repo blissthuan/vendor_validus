@@ -159,7 +159,6 @@ PRODUCT_PACKAGES += \
     nano \
     htop \
     powertop \
-    lsof \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \
@@ -171,7 +170,8 @@ PRODUCT_PACKAGES += \
     micro_bench \
     oprofiled \
     sqlite3 \
-    strace
+    strace \
+    pigz
 
 # Openssh
 PRODUCT_PACKAGES += \

@@ -14,6 +14,8 @@ PRODUCT_PACKAGES += \
 
 # Extra tools in validus
 PRODUCT_PACKAGES += \
+    bzip2 \
+    curl \
+    unrar \
     vim \
-    zip \
-    unrar
+    zip
