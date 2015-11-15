@@ -1,4 +1,5 @@
 #!/bin/sh
+add_lunch_combo validus_angler-userdebug
 
 add_lunch_combo validus_dlx-userdebug
 add_lunch_combo validus_endeavoru-userdebug
