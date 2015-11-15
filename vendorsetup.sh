@@ -1,13 +1,9 @@
 #!/bin/sh
 
-add_lunch_combo *_HTC
-###############
 add_lunch_combo validus_dlx-userdebug
 add_lunch_combo validus_endeavoru-userdebug
 add_lunch_combo validus_m8-userdebug
 
-add_lunch_combo *_LG
-###############
 add_lunch_combo validus_d800-userdebug
 add_lunch_combo validus_d801-userdebug
 add_lunch_combo validus_d802-userdebug
@@ -28,16 +24,12 @@ add_lunch_combo validus_v500-userdebug
 add_lunch_combo validus_vs980-userdebug
 add_lunch_combo validus_vs985-userdebug
 
-add_lunch_combo *_MOTOROLA
-###############
 add_lunch_combo validus_condor-userdebug
 add_lunch_combo validus_falcon-userdebug
 add_lunch_combo validus_ghost-userdebug
 add_lunch_combo validus_mb886-userdebug
 add_lunch_combo validus_titan-userdebug
 
-add_lunch_combo *_NEXUS
-###############
 add_lunch_combo validus_deb-userdebug
 add_lunch_combo validus_flo-userdebug
 add_lunch_combo validus_flounder-userdebug
@@ -46,13 +38,9 @@ add_lunch_combo validus_hammerhead-userdebug
 add_lunch_combo validus_mako-userdebug
 add_lunch_combo validus_shamu-userdebug
 
-add_lunch_combo *_ONEPLUS
-###############
 add_lunch_combo validus_bacon-userdebug
 add_lunch_combo validus_oneplus2-userdebug
 
-add_lunch_combo *_SAMSUNG
-###############
 add_lunch_combo validus_chagallwifi-userdebug
 add_lunch_combo validus_d2att-userdebug
 add_lunch_combo validus_d2tmo-userdebug
@@ -76,19 +64,13 @@ add_lunch_combo validus_serranoltexx-userdebug
 add_lunch_combo validus_skyrocket-userdebug
 add_lunch_combo validus_trltetmo-userdebug
 
-add_lunch_combo *_SONY
-###############
 add_lunch_combo validus_pollux-userdebug
 add_lunch_combo validus_pollux_windy-userdebug
 add_lunch_combo validus_sirius-userdebug
 add_lunch_combo validus_z3-userdebug
 add_lunch_combo validus_z3c-userdebug
 
-add_lunch_combo *_XIAOMI
-###############
 add_lunch_combo validus_armani-userdebug
 add_lunch_combo validus_cancro-userdebug
 
-add_lunch_combo *_MICROMAX
-###############
 add_lunch_combo validus_tomato-userdebug
