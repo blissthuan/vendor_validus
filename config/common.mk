@@ -198,7 +198,8 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
-    procrank
+    procrank \
+    su
 
 # Screen recorder
 PRODUCT_PACKAGES += \
