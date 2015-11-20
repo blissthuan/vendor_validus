@@ -303,4 +303,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 -include vendor/cyngn/product.mk
 
+-include vendor/validus/config/optimizations/sm.mk
+
 $(call prepend-product-if-exists, vendor/extra/product.mk)
