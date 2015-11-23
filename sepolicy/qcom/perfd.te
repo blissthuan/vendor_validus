@@ -4,3 +4,5 @@ unix_socket_connect(perfd, thermal, thermal-engine)
 # read mediaserver status
 allow perfd mediaserver:file { read open };
 
+#cm extra opts
+unix_socket_connect(perfd, thermal, thermal-engine)
