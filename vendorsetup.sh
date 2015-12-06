@@ -15,7 +15,6 @@ add_lunch_combo validus_d852-userdebug
 add_lunch_combo validus_d855-userdebug
 add_lunch_combo validus_f320-userdebug
 add_lunch_combo validus_f400-userdebug
-add_lunch_combo validus_geehrc-userdebug
 add_lunch_combo validus_ls980-userdebug
 add_lunch_combo validus_ls990-userdebug
 add_lunch_combo validus_v410-userdebug
