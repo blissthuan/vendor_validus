@@ -75,3 +75,5 @@ add_lunch_combo validus_armani-userdebug
 add_lunch_combo validus_cancro-userdebug
 
 add_lunch_combo validus_tomato-userdebug
+
+add_lunch_combo validus_Z00A-userdebug
