@@ -4,3 +4,5 @@
 
 allow system_server sysfs_lowmemorykiller:file rw_file_perms;
 allow system_server sysfs_devices_system_cpu:file rw_file_perms;
+
+allow system_server storage_stub_file:dir { getattr };
