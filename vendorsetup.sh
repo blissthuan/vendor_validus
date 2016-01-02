@@ -68,7 +68,7 @@ add_lunch_combo validus_trltetmo-userdebug
 add_lunch_combo validus_pollux-userdebug
 add_lunch_combo validus_pollux_windy-userdebug
 add_lunch_combo validus_sirius-userdebug
-add_lunch_combo validus_z3-userdebug
+add_lunch_combo validus_leo-userdebug
 add_lunch_combo validus_z3c-userdebug
 
 add_lunch_combo validus_armani-userdebug
